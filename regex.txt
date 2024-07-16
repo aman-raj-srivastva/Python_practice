@@ -1,0 +1,25 @@
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789
+Ha HaHa
+
+MetaCharacter (need to be escaped):
+. ^ $ * + ? { } [ ] | ( ) 
+
+codelvl.com
+321-456-7848
+313_450_6784
+192.342.4454
+356*778*6797
+921-656-7856
+
+Mr. Alpha Singh
++919540390563
++91 8851090909
+Ms Beta Kapoor
+91 7644076210
+09833409325
+Mr Gamma Chauhan
+9432099849
+9560091091
+
