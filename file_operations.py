@@ -2,8 +2,8 @@
 
 with open('tst.txt','r') as f:
     # f.read() --> will print the content in single string, newline as \n; (although not working here)
-    file_content=f.read()
-    print(file_content)
+    # file_content=f.read()
+    # print(file_content)
     
     # file_lines=f.readlines() 
     # print(file_lines)         # prints all lines in txt file in list form
@@ -26,18 +26,18 @@ with open('tst.txt','r') as f:
     # for line in f:
     #     print(line, end='') # *** new line will not be printed if it was printed earlier
         
-    # file_limit=f.read(7) #in chunks like division with specific size value
+    # file_limit=f.read(8) #in chunks like division with specific size value
     # print(file_limit, end='*')
-    # file_limit=f.read(7)
-    # print(file_limit, end='*')
-    # file_limit=f.read(7)
-    # print(file_limit, end='*')
-    # file_limit=f.read(7)
+    # file_limit=f.read(9)
     # print(file_limit, end='*')
     # file_limit=f.read(9)
     # print(file_limit, end='*')
     # file_limit=f.read(7)
     # print(file_limit, end='*')
+    # file_limit=f.read(7)
+    # print(file_limit, end='*')
+    # file_limit=f.read(7)
+    # print(file_limit, end='*') # and so on ...
     ## or to do in whole file use the following code:
     # f_limit=f.read(7)
     # while len(f_limit) > 0:
@@ -48,9 +48,10 @@ with open('tst.txt','r') as f:
     # f_content=f.read(10)
     # print(f.tell()) # f.tell() will tell the position of pointer (the point from which the next operation will take place)
     
-    # f.seek(17) # pointer/cursor moves to position/index 17 of txt file from start (it will not take -ve value)
-    # f_content=f.read(8)
-    # print(f_content)
+    f.seek(17) # pointer/cursor moves to position/index 17 of txt file from start (give error for -ve value)
+    f_content=f.read(8)
+    print(f_content)
+    print('Now pointer at',f.tell())
     
 #                                                    <-----Write Operations----->
  
