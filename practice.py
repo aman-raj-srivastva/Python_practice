@@ -99,6 +99,11 @@
 # a=print('12')
 # print(a)
 
-def f():
-    print('hi')
-f()
+# def f():
+#     print('hi')
+# f()
+
+# a=3
+# b=5
+# a,b=b,a # swaping
+# print(a,b) 
