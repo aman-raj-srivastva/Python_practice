@@ -1,6 +1,6 @@
 #                                                   <-----Read operations----->
 
-with open('tst.txt','r') as f:
+with open('assets/tst.txt','r') as f:
     # f.read() --> will print the content in single string, newline as \n; (although not working here)
     # file_content=f.read()
     # print(file_content)
@@ -55,7 +55,7 @@ with open('tst.txt','r') as f:
     
 #                                                    <-----Write Operations----->
  
-# with open('tst2.txt','w') as f: # as tst2.txt is not available thus this will create that file
+# with open('assets/tst2.txt','w') as f: # as tst2.txt is not available thus this will create that file
 #     f.write("TEST") # CAUTION: this will erase all the data in file and rewrite it with TEST
 #     f.seek(0)
 #     f.write('R')
@@ -70,11 +70,13 @@ with open('tst.txt','r') as f:
 #         for line in rf:
 #             wf.write(line)
 
-profit=[]
-with open('profit.csv','r') as f:
+# profit=[] # for list
+profit={} # for dictionary
+with open('assets/profit.csv','r') as f:
     for line in f:
         tokens=line.split(',')
         day=tokens[0]
         price=float(tokens[1])
-        profit.append([day,price])
+        # profit.append([day,price]) # as a list
+        profit[day]=price # as a dictinary
 print(profit)
