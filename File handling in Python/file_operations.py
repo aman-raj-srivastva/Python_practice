@@ -69,3 +69,12 @@ with open('tst.txt','r') as f:
 #     with open('globe.jpeg','wb') as wf:
 #         for line in rf:
 #             wf.write(line)
+
+profit=[]
+with open('profit.csv','r') as f:
+    for line in f:
+        tokens=line.split(',')
+        day=tokens[0]
+        price=float(tokens[1])
+        profit.append([day,price])
+print(profit)
