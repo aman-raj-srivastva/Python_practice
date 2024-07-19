@@ -108,6 +108,11 @@
 # a,b=b,a # swaping
 # print(a,b) 
 
+# list1=[i**2 for i in range(15) if i%2==0] # List comprehension
+# print(list1)
+# dict1={i:i*i for i in range(15) if i%2==0} # Dictionary comprehension
+# print(dict1)
+
 # numbers=list(range(1,101)) # can also be done with loops (extending an empty list one by one with current integer values)
 # print(numbers)
 # import sys
@@ -174,13 +179,43 @@
 # result=filter(fail,marks)
 # print('Failing Scoores:',list(result))
 
-city=['jaipur','kota','chandigarh','delhi','muzaffarpur']
-def length(city):
-    return len(city)
-sort=sorted(city, key=length, reverse=True)
-print('Sorted city by word length in reverse:',sort)
-# or
-city=['jaipur','kota','chandigarh','delhi','muzaffarpur']
-sort=sorted(city, key=lambda x: len(x),reverse=True)
-print('Sorted city by word length in reverse:',sort)
-print(174%7)
+# city=['jaipur','kota','chandigarh','delhi','muzaffarpur']
+# def length(city):
+#     return len(city)
+# sort=sorted(city, key=length, reverse=True)
+# print('Sorted city by word length in reverse:',sort)
+# # or
+# city=['jaipur','kota','chandigarh','delhi','muzaffarpur']
+# sort=sorted(city, key=lambda x: len(x),reverse=True)
+# print('Sorted city by word length in reverse:',sort)
+
+# def decorator(func):
+#     def wrapper():
+#         print('Transaction initiated...')
+#         func()
+#         print('Transaction ended...')
+#     return wrapper
+# def transaction():
+#     print("...Executing steps of transaction1...\nPlease wait!")
+# # Applying the decorator
+# trans1 = decorator(transaction)
+# # Invoking the decorated function
+# trans1()
+# @decorator
+# def transaction():
+#     print("...Executing steps of transaction2...\nPlease wait!")
+# transaction()
+
+import statistics
+import time
+start_tym=time.time()
+data=[12,45,23,78,90,102,67]
+mean=statistics.mean(data)
+median=statistics.median(data)
+mode=statistics.mode(data)
+var=statistics.variance(data)
+stdev=statistics.stdev(data)
+print(f"Mean: {mean}\nMedian: {median}\nMode: {mode}\nVariance: {var}\nStandard Deviation: {stdev}")
+end_tym=time.time()
+total_tym=end_tym-start_tym
+print('Total time taken (in seconds):',total_tym)

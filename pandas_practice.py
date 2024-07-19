@@ -11,7 +11,7 @@ import pandas as pd
 #           ('3','Kokila',58,'female','Kutch',160.5),
 #           (4,'Iyyer',35,'male','Chennai',169.4),
 #           (5,'Babita',25,'female','Kolkata',190),]
-# df=pd.DataFrame(std_data, columns=['seat_no','name','age','gender','city','height(in cm)'])
+# df=pd.DataFrame(std_data, columns=['seat_no','name','age','gender','city','height(in cm)'])  # dataframe created using list
 # print(df)
 # print('Columns of above DataFrame is',df.columns)
 # print(df.age) # or 
@@ -30,7 +30,7 @@ import pandas as pd
 # print(df.values)
 # print(df.index)
 
-# df=pd.read_csv('customers-100.csv') 
+# df=pd.read_csv('customers-100.csv')  # dataframe created using csv file
 # print(df,'\n') #  actual index values will remain as it is for each operations below
 # print('*** .head() operations:\n\n',df.head()) # by default shows only top 5 datasets/rows
 # print(df.head(16)) # top 16 rows
@@ -40,6 +40,17 @@ import pandas as pd
 # print('*** .tail() operations:\n\n',df.tail()) # by default shows only last 5 datasets/rows
 # print(df.tail(6)) # last 6 rows
 # print(df.tail(-2)) # prints whole datasets - 2 (from top)
+
+# data={'Name':['Bhide','Anjali','Sonu'],
+#       'Age':[45,30,20],
+#       'Salary':[120000,17500,10.5]}
+# df=pd.DataFrame(data) # dataframe created using dictionary
+# print(df)
+
+# import numpy as np
+# data=np.array([[1,'Sodhi',40],[2,'Roshan',35],[3,'Gogi',16]])
+# df=pd.DataFrame(data, columns=['Family member','Name','Age']) # dataframe created using Numpy array
+# print(df)
 
 std_data=[(1,'Mehtoos',32,'male','Bhopal',177.3),
           (2,'Jethiya',40,'male','Bhuj',170),
@@ -69,3 +80,10 @@ df.loc[4, 'child_name']=None
 print(df)
 df.loc[[0,3,4],'child_name']=['Chutanku','Nanhu','Nanhu']
 print(df)
+
+# import sqlite3
+# conn=sqlite3.connect('University.db')
+# query='SELECT * FROM STUDENTS'
+# df=pd.read_sql_query(query,conn)  # dataframe using SQL database (NOT Working)
+# print(df)
+# conn.close()
