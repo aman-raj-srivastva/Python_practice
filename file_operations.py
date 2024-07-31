@@ -1,5 +1,16 @@
 #                                                   <-----Read operations----->
 
+f=open("assets/tst.txt","r")
+# ...operations...
+print(f.closed)
+f.close()
+print(f.closed)
+# or you can do the below code to not explicitely close file using f.close()
+with open("assets/tst.txt","r") as f:
+    # ...operations...
+    print(f.name)
+print(f.closed)
+
 with open('assets/tst.txt','r') as f:
     # f.read() --> will print the content in single string, newline as \n; (although not working here)
     # file_content=f.read()

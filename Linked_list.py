@@ -94,3 +94,4 @@ while current is not None:
     current=current.next
 print('None')
 print('Count of this Linklist is',count)
+

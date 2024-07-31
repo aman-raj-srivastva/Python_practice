@@ -30,7 +30,7 @@ import pandas as pd
 # print(df.values)
 # print(df.index)
 
-df=pd.read_csv('customers-100.csv')  # dataframe created using csv file
+df=pd.read_csv('assets/customers-100.csv')  # dataframe created using csv file
 print(df,'\n') #  actual index values will remain as it is for each operations below
 print('*** .head() operations:\n\n',df.head()) # by default shows only top 5 datasets/rows
 print(df.head(16)) # top 16 rows
